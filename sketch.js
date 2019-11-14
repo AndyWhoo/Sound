@@ -67,7 +67,7 @@ function mousePressed(){
     env.play(noise);
 
     background(255);
-      image(hill, 0,0.3,500,270);
+      image(hill, 0,0,windowWidth,windowHeight);
 
   }
   osc.start();
