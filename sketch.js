@@ -3,15 +3,21 @@ let osc;
 let waveFormSelect;
 let pNoise;
 let noise, env, delay;
+let hill;
+
+function preload() {
+  hill = loadImage('hill.png');
+}
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+
 
 //osc = new p5.Oscillator('square');
 //osc.setType('triangle');
 
 textAlign(CENTER);
-  text('Cloud', width/2, height/2);
+  text('', width/2, height/2);
   noise = new p5.Noise('brown');
  noise.amp(.08);
  noise.start();
@@ -61,6 +67,7 @@ function mousePressed(){
     env.play(noise);
 
     background(255);
+      image(hill, 0,0.3,500,270);
 
   }
   osc.start();
